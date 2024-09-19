@@ -1,0 +1,63 @@
+openapi: 3.0.0
+info:
+  title: API de Usuarios
+  version: 1.0.0
+  description: Documentación de la API para gestionar usuarios.
+
+servers:
+  - url: http://localhost:3000
+    description: Servidor local para desarrollo
+
+paths:
+  /api/user/updateUser:
+    put:
+      summary: Actualizar usuario
+      description: Actualiza el nombre de usuario y la contraseña de un usuario existente utilizando su ID.
+      tags:
+        - Usuarios
+      parameters:
+        - in: query
+          name: id
+          required: true
+          schema:
+            type: integer
+            example: 34
+          description: ID del usuario a actualizar
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                username:
+                  type: string
+                  example: "zzzzzzzzzzzzzzzzz"
+                password:
+                  type: string
+                  example: "examplePassword"
+      responses:
+        '200':
+          description: Usuario actualizado con éxito.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+        '400':
+          description: Error en los datos proporcionados.
+        '404':
+          description: Usuario no encontrado.
+        '500':
+          description: Error en el servidor.
+
+components:
+  schemas:
+    User:
+      type: object
+      properties:
+        id:
+          type: integer
+        username:
+          type: string
+        password:
+          type: string

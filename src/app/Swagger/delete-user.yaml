@@ -1,0 +1,44 @@
+openapi: 3.0.0
+info:
+  title: API de Usuarios
+  version: 1.0.0
+  description: Documentación de la API para gestionar usuarios.
+
+servers:
+  - url: http://localhost:3000
+    description: Servidor local para desarrollo
+
+paths:
+  /api/user/deleteUser:
+    delete:
+      summary: Eliminar usuario por ID
+      description: Elimina un usuario del sistema utilizando su ID.
+      tags:
+        - Usuarios
+      parameters:
+        - in: query
+          name: id
+          required: true
+          schema:
+            type: integer
+            example: 37
+          description: ID del usuario a eliminar
+      responses:
+        '200':
+          description: Usuario eliminado con éxito.
+        '404':
+          description: Usuario no encontrado.
+        '500':
+          description: Error en el servidor.
+
+components:
+  schemas:
+    User:
+      type: object
+      properties:
+        id:
+          type: integer
+        username:
+          type: string
+        password:
+          type: string

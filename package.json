@@ -1,0 +1,89 @@
+{
+  
+  "name": "app-peliculas",
+  
+  "version": "0.1.0",
+  
+  "private": true,
+  
+  "scripts": {
+  
+    
+  "dev": "next dev",
+  
+    
+  "build": "next build",
+  
+    
+  "start": "cross-env PORT=4000 react-scripts start",
+  
+    
+  "start:port4000": "cross-env PORT=4000 react-scripts start",
+  
+    
+  "lint": "next lint"
+  
+  },
+  
+  "dependencies": {
+  
+    
+  "@fortawesome/fontawesome-svg-core": "^6.6.0",
+  
+    
+  "@fortawesome/free-solid-svg-icons": "^6.6.0",
+  
+    
+  "@fortawesome/react-fontawesome": "^0.2.2",
+  
+    
+  "axios": "^1.7.7",
+  
+    
+  "bcryptjs": "^2.4.3",
+  
+    
+  "body-parser": "^1.20.3",
+  
+    
+  "bootstrap": "^5.3.3",
+  
+    
+  "bootstrap-icons": "^1.11.3",
+  
+    
+  "cookie": "^0.6.0",
+  
+    
+  "express": "^4.21.0",
+  
+    
+  "jsonwebtoken": "^9.0.2",
+  
+    
+  "mysql2": "^3.11.3",
+  
+    
+  "next": "14.2.12",
+  
+    
+  "react": "^18",
+  
+    
+  "react-dom": "^18",
+  
+    
+  "swagger-jsdoc": "^6.2.8",
+  
+    
+  "swagger-ui-express": "^5.0.1"
+  
+  },
+  
+  "devDependencies": {
+  
+    
+  "cross-env": "^7.0.3"
+  
+  }
+}
